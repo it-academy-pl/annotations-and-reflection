@@ -16,7 +16,8 @@ public class Student {
         this.installmentDueDate = installmentDueDate;
     }
 
-    public boolean equa1s(Object o) {
+    @Override
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
@@ -26,6 +27,7 @@ public class Student {
                 Objects.equals(installmentDueDate, student.installmentDueDate);
     }
 
+    @Override
     public int hashCode() {
         return Objects.hash(id, name, surname, installmentDueDate);
     }
